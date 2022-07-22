@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.2c6591e2.css","mappings":"AAAA,GACE,UAGF,OAGE,iFADA,aADA,WAEA","sources":["styles/style.scss"],"sourcesContent":["h1 {\r\n  color: red;\r\n}\r\n\r\nfigure {\r\n  width: 200px;\r\n  height: 200px;\r\n  background-image: url('../assets/laughing.svg');\r\n}\r\n"],"names":[],"sourceRoot":""}
