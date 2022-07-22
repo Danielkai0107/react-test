@@ -1,7 +1,8 @@
 function App() {
   return (
     <div className="App">
-      <h1>APP</h1>
+      <h1>APPds</h1>
+      <figure></figure>
     </div>
   );
 }
