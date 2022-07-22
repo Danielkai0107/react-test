@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './styles/style.scss';
+import Navbar from './components/Navbar';
+import { ShoppingCartProvider } from './contexts/Context';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './styles/globals.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <ShoppingCartProvider>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/react-test" element={<App />} />
+        </Routes>
+      </BrowserRouter>
+    </ShoppingCartProvider>
   </React.StrictMode>,
 );

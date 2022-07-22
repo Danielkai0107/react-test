@@ -1,0 +1,162 @@
+.header {
+  @include flex-center(center, row);
+  @include size(100%, 100vh);
+  @include bg-cover;
+  background-image: url('../../images/bgc-none-2.png');
+  &__pop {
+    @include absolute-lt(0, 0);
+    @include size(100%, 100vh);
+    z-index: 2;
+    overflow: hidden;
+    @include img-w(100%, cover);
+  }
+  &__mask {
+    @include absolute-lt(0, 0);
+    @include size(100%, 100vh);
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 3;
+  }
+  &__info {
+    @include absolute-lt(0%, 5em);
+    height: calc(100vh - 5em);
+    transition: all 0.4s;
+    @include flex-center(center, row);
+  }
+  &__index {
+    @include flex-between(center, column);
+    z-index: 10;
+    width: 8%;
+    height: 30vh;
+    li {
+      font-weight: 100;
+      @include flex-center(center, row);
+      p {
+        color: #fff;
+        @include font(0.7em, 1.5em, 100, 5px);
+      }
+      h1 {
+        color: #fff;
+        text-align: center;
+        @include font(1.6em, 1.5em, 100, 0);
+      }
+      span {
+        display: block;
+        @include size(20px, 0.5px);
+        background-color: #fff;
+        margin: 0 1.5em;
+      }
+      &:nth-child(1) {
+        transform: rotate(-90deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &__AsideBtn {
+    @include flex-between(center, column);
+    z-index: 15;
+    width: 8%;
+    height: 20vh;
+    li {
+      font-weight: 100;
+      @include flex-center(center, row);
+      span {
+        display: block;
+        @include size(40px, 0.5px);
+        background-color: #fff;
+      }
+      &:nth-child(1) {
+        transform: rotate(-90deg);
+      }
+      &:nth-child(2) {
+        @include size(1.5em, 1.5em);
+        border-radius: 1.5em;
+        cursor: pointer;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transition: all 0.4s;
+        &:hover {
+          background-color: #ccc;
+          opacity: 0.7;
+        }
+      }
+      &:nth-child(3) {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &__main {
+    width: 84%;
+    max-height: 100%;
+    z-index: 15;
+    padding: 0 2em;
+    h2 {
+      text-align: center;
+      color: #fff;
+      @include font(3em, 1.5, 100, 1px);
+    }
+    .title {
+      color: #fff;
+      width: 90%;
+      @include font(3em, 1.5, 400, 0);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /*省略第n行後的文字*/
+      -webkit-box-orient: vertical; /*設定元素是垂直布局*/
+    }
+    .info {
+      width: 100%;
+      @include flex-between(center, row);
+      margin-top: 2em;
+      &__data {
+        .date {
+          color: #fff;
+          @include font(0.8em, 1.5, 100, 2px);
+        }
+        .average {
+          color: #fff;
+          @include font(0.7em, 1.5, 100, 2px);
+          margin-top: 2em;
+        }
+      }
+      &__btn {
+        button {
+          color: #ccc;
+          background-color: transparent;
+          border: 1px solid #ccc;
+          height: 2em;
+          padding: 0 1em;
+          @include font(0.9em, 1.8em, 100, 1px);
+          margin: 0.5em 0 0.5em 1em;
+          border-radius: 2.5em;
+          transition: all 0.6s;
+          cursor: pointer;
+          &:hover {
+            background-color: #ccc;
+            color: #333;
+          }
+        }
+      }
+    }
+    .description {
+      color: #fff;
+      width: 100%;
+      max-height: 28vh;
+      padding-right: 1em;
+      @include font(0.9em, 2em, 100, 1px);
+      margin-top: 2em;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 2px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        position: relative;
+        background: #ccc;
+        border-radius: 2px;
+      }
+    }
+  }
+}
