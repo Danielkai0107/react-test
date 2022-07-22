@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className={asideBtn ? 'navbar w--75' : 'navbar w--100'}>
       <ul>
         <li className="logo">
-          <a href="">
+          <a href="/">
             MOVIE<span>FINDER</span>
           </a>
         </li>

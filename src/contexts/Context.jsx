@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import axios from 'axios';
 
 const ShoppingCartContext = createContext();
 
@@ -34,9 +35,8 @@ export function ShoppingCartProvider({ children }) {
 
   async function getMovieApi() {
     try {
-      let d = await fetch(url);
-      let dj = await d.json();
-      let results = dj.results;
+      const response = await axios.get(url);
+      let results = response.data.results;
       let movieInfo = results.map((item, index) => {
         return {
           number: index + 1,
