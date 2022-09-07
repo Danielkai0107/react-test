@@ -57,8 +57,7 @@ export function ShoppingCartProvider({ children }) {
       setInput('');
       scroll();
     } catch (error) {
-      console.log(error);
-      setAsideOPen(true);
+      setAsideOPen(!asideBtn);
       setInput('');
     }
   }
